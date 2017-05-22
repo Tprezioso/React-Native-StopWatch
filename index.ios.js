@@ -32,18 +32,19 @@ var StopWatch = React.createClass({
     </View>
   },
 
-laps: function() {
-  return this.state.laps.map(function(time, index){
-    return <View style={styles.lap}>
-      <Text style={styles.lapText}>
-        Lap #{index + 1}
-      </Text>
-      <Text style={styles.lapText}>
-        {formatTime(time)}
-      </Text>
-    </View>
-  });
-},
+  laps: function() {
+    return this.state.laps.map(function(time, index){
+      return <View style={styles.lap}>
+        <Text style={styles.lapText}>
+          Lap #{index + 1}
+          </Text>
+        <Text style={styles.lapText}>
+          {formatTime(time)}
+          </Text>
+        </View>
+    });
+  },
+
   startStopButton: function (){
     var styleSwitch = this.state.running ? styles.stopButton : styles.startButton;
     return <TouchableHighlight onPress={this.handleStartPress} underlayColor='grey' style={[styles.button, styleSwitch]}>
@@ -60,6 +61,7 @@ laps: function() {
         </Text>
       </TouchableHighlight>
   },
+
   handleLapPress: function() {
     var lap = this.state.timeElapsed;
 
@@ -115,9 +117,11 @@ var styles = StyleSheet.create({
     justifyContent: 'space-around',
     alignItems: 'center'
   },
+
   timer: {
     fontSize: 60
   },
+
   button: {
     borderWidth: 2,
     height: 100,
@@ -126,16 +130,20 @@ var styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center'
   },
+
   startButton: {
     borderColor: 'green'
   },
+
   stopButton: {
     borderColor: 'red'
   },
+
   lap: {
     justifyContent: 'space-around',
     flexDirection: 'row'
   },
+
   lapText: {
     fontSize: 30
   }
