@@ -19,7 +19,7 @@ var StopWatch = React.createClass({
           <Text style={styles.timer}>
             {formatTime(this.state.timeElapsed)}
           </Text>
-        </View>
+      </View>
         <View style={styles.buttonWrapper}>
           {this.startStopButton()}
           {this.lapButton()}
@@ -97,21 +97,21 @@ var styles = StyleSheet.create({
     alignItems: 'stretch'
   },
 
-  header: { // yellow
+  header: {
     flex: 1
   },
 
-  footer: { // blue
+  footer: {
     flex: 1
   },
 
-  timerWrapper: { // red
+  timerWrapper: {
     flex: 5, // take up 5/8 of available space
     justifyContent: 'center',
     alignItems: 'center'
   },
 
-  buttonWrapper: { // green
+  buttonWrapper: {
     flex: 3, // takes up 3/8 of space
     flexDirection: 'row',
     justifyContent: 'space-around',
