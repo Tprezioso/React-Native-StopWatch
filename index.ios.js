@@ -64,7 +64,6 @@ var StopWatch = React.createClass({
 
   handleLapPress: function() {
     var lap = this.state.timeElapsed;
-
     this.setState({
       startTime: new Date(),
       laps: this.state.laps.concat([lap])
